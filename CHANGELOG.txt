@@ -1,0 +1,16 @@
+Change Log
+==========
+
+0.1.0 (03/03/2023)
+-------------------
+- First release 
+- Usefule IC's: 24C01, 24C02
+- EEPROM file system
+  * create_TOC
+  * write file to icfs
+  * load file from icfs
+  * remove file from icfs 
+  * list files at icfs
+  * wipe icfs with char
+- required library:
+  * Adafruit_PureIO > 1.1.8
