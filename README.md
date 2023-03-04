@@ -42,4 +42,5 @@ pip3 install -i https://test.pypi.org/simple/ icfs
 pip3 install -i https://pypi.org/simple/ icfs
 
 pip install icfs
+pip3 install --index-url https://test.pypi.org/simple icfs
 ```
