@@ -10,7 +10,7 @@ classifiers = [
 
 setup(
     name = 'icfs',
-    version = '0.0.2',
+    version = '0.0.4',
     author = 'Marian Minar',
     author_email = 'mminar7@gmail.com',
     platform = 'armv7l',

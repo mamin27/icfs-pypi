@@ -1,5 +1,6 @@
 import time
 import sys, getopt
+import os
 import yaml
 import re
 import binascii
@@ -178,7 +179,8 @@ class EEPROM_FS(object):
         chip_list.init()
 
     def init_config(self):
-        with open("/home/comet/.comet/config.yaml") as c:
+        home_dir = os.environ['HOME']
+        with open(home_dir + "/.comet/config.yaml") as c:
            try:
               config = yaml.safe_load(c)
            except yaml.YAMLError as exc:
@@ -195,7 +197,8 @@ class EEPROM_FS(object):
 
         c.close()
 
-        with open("config/eepromfs.yaml") as d:
+        local_dir = os.path.dirname(os.path.abspath(__file__)) + '/config/eepromfs.yaml'
+        with open(local_dir) as d:
            try:
               toc_config = yaml.safe_load(d)
            except yaml.YAMLError as exc:
@@ -549,7 +552,8 @@ class EEPROM_FS(object):
 
     def code_filetype(self, filetype, reverse = None):
         # add byte code to filetype, see into filetype.yaml
-        with open("config/filetype.yaml") as c:
+        local_dir = os.path.dirname(os.path.abspath(__file__)) + '/config/filetype.yaml'
+        with open(local_dir) as c:
            try:
               ft_config = yaml.safe_load(c)
            except yaml.YAMLError as exc:
