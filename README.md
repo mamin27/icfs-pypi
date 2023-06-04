@@ -6,6 +6,7 @@
 ```python
 $ pip3 install setuptools
 $ pip3 install wheel
+$ sudo apt-get install python3-dev
 $ sudo apt-get install python3-venv -y
 $ python3 -m venv ~/my_venv
 $ source ~/my_venv/bin/activate
