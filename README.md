@@ -12,7 +12,7 @@ $ python3 -m venv ~/my_venv
 $ source ~/my_venv/bin/activate
 $ git clone git@github.com:mamin27/icfs-pypi.git
 $ cd ~/icfs-pypi
-$ python3 setup.py bdist_wheel
+$ python3 setup.py clean sdist bdist_wheel
 $ pip3 install -e .
 
 
